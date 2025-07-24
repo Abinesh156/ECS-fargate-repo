@@ -1,0 +1,5 @@
+DNS Lookup Time:        %{time_namelookup}s
+TCP Connect Time:       %{time_connect}s
+TLS Handshake Time:     %{time_appconnect}s
+Server Processing Time: %{time_starttransfer}s
+Total Time:             %{time_total}s
