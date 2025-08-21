@@ -1,17 +1,17 @@
-# Use Python 3.9 slim image as a base image
+# Use a lightweight Python image
 FROM python:3.9-slim
 
-# Set working directory inside the container
+# Set the working directory in the container
 WORKDIR /app
 
-# Copy the application code into the container
-COPY . /app
+# Copy the Python application to the container
+COPY app.py .
 
-# Install the necessary dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+# Install Flask
+RUN pip install flask
 
-# Expose port 80 for the container
+# Expose port 80 for the application to be accessed
 EXPOSE 80
 
-# Use Gunicorn to serve the app on port 80
-CMD ["gunicorn", "-b", "0.0.0.0:80", "app:app"]
+# Command to run the Python application
+CMD ["python", "app.py"]
