@@ -6,7 +6,7 @@ app = Flask(__name__)
 # Root endpoint
 @app.route('/')
 def index():
-    return jsonify({"message": "Welcome to the Backend API!"})
+    return jsonify({"message": "Welcome to the Backend API! there is no frontend for this project. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."})
 
 # Hello endpoint
 @app.route('/api/hello', methods=['GET'])
