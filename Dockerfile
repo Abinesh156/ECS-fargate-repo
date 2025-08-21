@@ -7,5 +7,11 @@ WORKDIR /app
 # Copy the Python application file into the container
 COPY hello.py .
 
+# Install Flask
+RUN pip install flask
+
+# Expose port 80 to the container
+EXPOSE 80
+
 # Run the Python script
 CMD ["python", "hello.py"]
